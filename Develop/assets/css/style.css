@@ -60,15 +60,8 @@ p {
     background-position: center;
 }
 
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
+/*Removed .float-right and .float-left as they were no longer needed*/
 
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
 
 .content {
     width: 75%;
@@ -142,6 +135,7 @@ p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
     color: #ffffff;
+    
 }
 
 .online-reputation-management {
@@ -164,29 +158,42 @@ p {
 
 .search-engine-optimization img {
     max-height: 200px;
+    float: left;
+    margin-right: 25px;
 }
 
 .online-reputation-management img {
     max-height: 200px;
+    float: right;
+    margin-left: 25px;
+    
+
 }
 
 .social-media-marketing img {
     max-height: 200px;
+    float: left;
+    margin-right: 25px;
 }
 
 .search-engine-optimization h2 {
     margin-bottom: 20px;
     font-size: 36px;
+    display: inline-block;
 }
 
 .online-reputation-management h2 {
     margin-bottom: 20px;
     font-size: 36px;
+    display: inline-block;
 }
+
+
 
 .social-media-marketing h2 {
     margin-bottom: 20px;
     font-size: 36px;
+    display: inline-block;
 }
 
 .footer {
