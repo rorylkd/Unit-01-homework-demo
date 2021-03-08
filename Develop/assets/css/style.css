@@ -1,30 +1,30 @@
-* {
+* {                                 /*Universal selector. Border-box tells the browser to account for any border and padding in the values you specify for an element's width and height.*/
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
+    margin: 0
 }
 
-body {
+body {                              /*Background color for the body*/
     background-color: #d9dcd6;
 }
 
-.header {
+.header {                           /*Styling for the header*/
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
     color: #ffffff;
 }
 
-.header h1 {
+.header h1 {                        /*Sets font and position for the Horiseon header*/
     display: inline-block;
     font-size: 48px;
 }
 
-.header h1 .seo {
+.header h1 .seo {                   /*Color change for the "seo" in Horiseon*/
     color: #d9dcd6;
 }
 
-.header div {
+.header nav {                       /*Styling for the navigation*/                                            /* Changed div to nav*/                    
     padding-top: 15px;
     margin-right: 20px;
     float: right;
@@ -32,25 +32,27 @@ body {
     font-size: 20px;
 }
 
-.header div ul {
-    list-style-type: none;
-}
 
-.header div ul li {
+/*Deleted .header nav ul {list-style-type: none;}*/  
+    
+
+
+.header nav ul li {                           /*Positions the navigation menu*/          /* Changed div to nav*/ 
     display: inline-block;
     margin-left: 25px;
 }
 
-a {
+a {                                            /*Sets hyperlink color*/
     color: #ffffff;
     text-decoration: none;
 }
 
-p {
+/*Deleted p {
     font-size: 16px;
 }
+as 16px is the default anyways*/
 
-.hero {
+.hero {                                         /*Size/position/margins for the background immage*/                            
     height: 800px;
     width: 100%;
     margin-bottom: 25px;
@@ -59,23 +61,50 @@ p {
     background-position: center;
 }
 
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
+/*Removed .float-right and .float-left as I added the neccesary selectors to the relevant sections below. */
 
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
 
-.content {
+.content {                                          /*Formatting context/size/margins for the main section*/
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
 
-.benefits {
+
+.search-engine-optimization, .online-reputation-management, .social-media-marketing {           /*Styling for main section*/                /*Consolidated into one*/
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+    
+}
+
+
+
+.search-engine-optimization img, .social-media-marketing img {         /*Formatting for main section images*/         /*Consolidated SEO img and SMM img*/
+    max-height: 200px;
+    float: left;
+    margin-right: 25px;
+}
+
+.online-reputation-management img {       /*Formatting for ORM image*/
+    max-height: 200px;
+    float: right;
+    margin-left: 25px;
+    
+
+}
+
+
+h2 {                                 /*Sets font size/formatting/margin on h2 headers*/           /*Consolidated into one*/
+    margin-bottom: 20px;
+    font-size: 36px;
+    display: inline-block;
+}
+
+.benefits {                                             /*Styling for the sidebar*/
     margin-right: 20px;
     padding: 20px;
     clear: both;
@@ -86,115 +115,30 @@ p {
     background-color: #2589bd;
 }
 
-.benefit-lead {
+
+.benefit-cost, .benefit-brand, .benefit-lead{       /*Font color and margin for the sidebar section*/    /*Consolidated the three sidebar stylings*/
     margin-bottom: 32px;
     color: #ffffff;
+    text-align: center;
 }
 
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
 
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3 {
+.h3 {                                               /*Styling for the sidebar text*/     /*Consolidated into a single .h3 selector instead of three seperate ones*/
     margin-bottom: 10px;
     text-align: center;
 }
 
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
 
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
 
-.benefit-lead img {
+.benefits img {                                     /*Formatting for the sidebar images*/       /*Consolidated into .benefits img instead of having three seperate selectors*/
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
+
+.footer {                           /*Footer display type*/
+    display: none;     /*Does not appear in mock-up, so I changed it to hidden & deleted unnecessary stylings*/
 }
 
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
 
-.search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization img {
-    max-height: 200px;
-}
-
-.online-reputation-management img {
-    max-height: 200px;
-}
-
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-.search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.footer {
-    padding: 30px;
-    clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-}
-
-.footer h2 {
-    font-size: 20px;
-}
